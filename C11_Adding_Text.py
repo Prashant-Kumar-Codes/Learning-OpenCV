@@ -29,6 +29,17 @@ Hershey Complex Small:     cv2.FONT_HERSHEY_COMPLEX_SMALL
 Hershey Script Simplex:    cv2.FONT_HERSHEY_SCRIPT_SIMPLEX
 Hershey Script Complex:    cv2.FONT_HERSHEY_SCRIPT_COMPLEX
 '''
+# (img, text, org, fontFace, fontScale, color, thickness=None, lineType=None, bottomLeftOrigin=None)
 
-img = numpy.ones((600, 600, 3)) * 255
+img = numpy.ones((600, 600, 3), dtype= numpy.uint8) * 255
 
+if img is None:
+    print('Image cannot be formed')
+else:
+    print('Image created successfully')
+
+    cv2.putText(img, 'Hello, This is the text i have put it on this image', (40,300), cv2.FONT_HERSHEY_DUPLEX, 0.9, (20,25,222), 2, cv2.LINE_AA)
+
+    cv2.imshow('Image_Added_Text', img)
+    cv2.waitKey(0)
+    cv2.destroyAllWindows()
