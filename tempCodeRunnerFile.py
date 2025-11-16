@@ -1,1 +1,2 @@
-cv2.waitKey(0)
+
+img_tony = cv2.imread(r'D:\Codes\Images\Tony_Stark.jpg',)

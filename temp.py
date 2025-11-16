@@ -1,4 +1,6 @@
-import numpy
-
-x = numpy.ones((10,10,3), dtype = 'uint8')
-print(x)
+inp = eval(input('ENTER: '))
+print(type(inp))
+if isinstance(inp, tuple):
+    print('Yess it is tuple')
+else:
+    print('No its not a tuple')
