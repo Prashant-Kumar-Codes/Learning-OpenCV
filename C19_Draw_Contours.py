@@ -107,11 +107,13 @@ threshold_value, threshold_img_array = cv2.threshold(cv2.cvtColor(img, cv2.COLOR
 
 
 #FIND COUNTORS
-#   contours, hierarchy = cv2.findContours(image, mode, method)
+# contours, hierarchy = cv2.findContours(image, mode, method)
 contours, heirarchy = cv2.findContours(threshold_img_array, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
-# cv2.drawContours(img, contours, -1, (20, 255, 20), 3, cv2.LINE_AA)
+#DRAWING THE CONTOURS
+# cv2.drawContours(image, contours, contour_index, color, thickness, lineType )
+cv2.drawContours(img, contours, -1, (20, 255, 20), 3, cv2.LINE_AA)
 
-# cv2.imshow('Contours', img)
-# cv2.waitKey(0)
-# cv2.destroyAllWindows()
+cv2.imshow('Contours', img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()

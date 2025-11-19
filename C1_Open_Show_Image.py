@@ -8,7 +8,7 @@ import cv2
 # flags = 0 // for grayscale or black and white
 # flags = -1 // load the image as it is
  
-opimg =  cv2.imread('D:/codes/images/Tree.jpg')
+opimg =  cv2.imread('D:/codes/images/80x80.jpg')
 
 if opimg is None:
     print('Error in loading the image')

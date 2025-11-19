@@ -32,6 +32,7 @@ Usage:
     Gaussian blur is commonly used for noise reduction and image smoothing before edge detection (like in cv2.Canny()).
 
 '''
+# cv2.GaussianBlur(src, ksize, sigmaX, dst=None, sigmaY=None, borderType=None)
 gaussian_blur_img = cv2.GaussianBlur(img, (11,11), 10)
 
 
