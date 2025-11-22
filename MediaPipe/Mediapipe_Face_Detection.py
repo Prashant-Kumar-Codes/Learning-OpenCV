@@ -136,7 +136,9 @@ results.detections == None
 
 
 
-cap = cv2.VideoCapture(0)
+#cap = cv2.VideoCapture(r"E:\Videos\122848-726398081_tiny.mp4")
+cap = cv2.VideoCapture(r"E:\Videos\142030-779071797_tiny.mp4")
+#cap = cv2.VideoCapture(0)
 height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
 width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
 capFPS = int(cap.get(cv2.CAP_PROP_FPS))
@@ -146,7 +148,7 @@ ptime = 0
 
 mp_face_detection = mp.solutions.face_detection
 mp_draw = mp.solutions.drawing_utils
-faceDetection = mp_face_detection.FaceDetection(0.8)
+faceDetection = mp_face_detection.FaceDetection(0.4)
 
 while True:
     ret, frame = cap.read()

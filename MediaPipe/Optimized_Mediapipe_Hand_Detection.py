@@ -5,7 +5,8 @@ import time
 previous_time = 0
 
 # Set lower resolution for faster processing
-video_capture = cv2.VideoCapture(0)
+#video_capture = cv2.VideoCapture(r"E:\Videos\142030-779071797_tiny.mp4")
+video_capture = cv2.VideoCapture(r"E:\Videos\122848-726398081_tiny.mp4")
 video_capture.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 video_capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 
