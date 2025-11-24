@@ -1,22 +1,22 @@
 import cv2
 import mediapipe as mp
 import time
-
+q
 previous_time = 0
 
 # Set lower resolution for faster processing
 #video_capture = cv2.VideoCapture(r"E:\Videos\142030-779071797_tiny.mp4")
-video_capture = cv2.VideoCapture(r"E:\Videos\122848-726398081_tiny.mp4")
-video_capture.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
-video_capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+video_capture = cv2.VideoCapture(0)
+video_capture.set(cv2.CAP_PROP_FRAME_WIDTH, 900)
+video_capture.set(cv2.CAP_PROP_FRAME_HEIGHT, 600)
 
 mp_hands = mp.solutions.hands
 
 # Optimized parameters for better FPS
 hands_detector = mp_hands.Hands(
     static_image_mode=False,
-    model_complexity=0,        # Lighter model
-    max_num_hands=2,           # Track 1 hand only
+    model_complexity=0,        # Lighter modelq
+    max_num_hands = 4,           # Track 4 hands only
     min_detection_confidence=0.5,
     min_tracking_confidence=0.3
 )
@@ -35,6 +35,7 @@ while True:
     
     if detection_results.multi_hand_landmarks:
         for hand_landmarks in detection_results.multi_hand_landmarks:
+            print(detection_results.multi_hand_landmarks)
             # Draw landmarks without extra processing
             mp_drawing.draw_landmarks(frame, hand_landmarks, mp_hands.HAND_CONNECTIONS)
     

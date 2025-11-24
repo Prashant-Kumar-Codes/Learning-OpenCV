@@ -137,8 +137,8 @@ results.detections == None
 
 
 #cap = cv2.VideoCapture(r"E:\Videos\122848-726398081_tiny.mp4")
-cap = cv2.VideoCapture(r"E:\Videos\142030-779071797_tiny.mp4")
-#cap = cv2.VideoCapture(0)
+#cap = cv2.VideoCapture(r"E:\Videos\142030-779071797_tiny.mp4")
+cap = cv2.VideoCapture(0)
 height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)
 width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)
 capFPS = int(cap.get(cv2.CAP_PROP_FPS))
