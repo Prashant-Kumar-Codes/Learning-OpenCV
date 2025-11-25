@@ -1,7 +1,7 @@
 import cv2
 import mediapipe as mp
 import time
-q
+
 previous_time = 0
 
 # Set lower resolution for faster processing
@@ -16,9 +16,9 @@ mp_hands = mp.solutions.hands
 hands_detector = mp_hands.Hands(
     static_image_mode=False,
     model_complexity=0,        # Lighter modelq
-    max_num_hands = 4,           # Track 4 hands only
-    min_detection_confidence=0.5,
-    min_tracking_confidence=0.3
+    # max_num_hands = 2,           # Track 4 hands only
+    min_detection_confidence=0.6,
+    min_tracking_confidence=0.5
 )
 
 mp_drawing = mp.solutions.drawing_utils
